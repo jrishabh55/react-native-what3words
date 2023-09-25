@@ -1,18 +1,20 @@
-import * as React from 'react';
+import React from 'react';
 
-import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-what3words';
+import { StyleSheet, Text, View } from 'react-native';
+import What3Words from 'react-native-what3words';
+
+const API_KEY = '';
+const MAP_API_KEY = '';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
-
-  React.useEffect(() => {
-    multiply(3, 7).then(setResult);
-  }, []);
-
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Text>What3Words</Text>
+      <What3Words
+        apiKey={API_KEY}
+        mapApiKey={MAP_API_KEY}
+        onSelect={console.log}
+      />
     </View>
   );
 }
@@ -20,8 +22,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    maxHeight: 500,
+    marginTop: 100,
   },
   box: {
     width: 60,
