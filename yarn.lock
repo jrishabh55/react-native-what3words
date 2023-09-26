@@ -8371,6 +8371,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"expo-location@npm:^16.3.0":
+  version: 16.3.0
+  resolution: "expo-location@npm:16.3.0"
+  peerDependencies:
+    expo: "*"
+  checksum: 17bdfd0d13bb9605abf781777c766eee199629c8707197f5aa97d537c65f1c6ab709acb9c28d17611569dc9cc4f259dd3eb62c4446a3bfae1380aa150404b5c1
+  languageName: node
+  linkType: hard
+
+"expo-location@npm:~16.1.0":
+  version: 16.1.0
+  resolution: "expo-location@npm:16.1.0"
+  peerDependencies:
+    expo: "*"
+  checksum: 694d7e6ff2742b6b9d0fe7c52772de893adb1cda5dea402767d415d6dad3e468f40e1dcd673a16d04ac7d169b3539d78ddd76d0be704df63806dcca22de95ee9
+  languageName: node
+  linkType: hard
+
 "expo-modules-autolinking@npm:1.5.1":
   version: 1.5.1
   resolution: "expo-modules-autolinking@npm:1.5.1"
@@ -15312,6 +15330,7 @@ __metadata:
     babel-loader: ^8.1.0
     babel-plugin-module-resolver: ^5.0.0
     expo: ~49.0.11
+    expo-location: ~16.1.0
     expo-status-bar: ~1.6.0
     react: 18.2.0
     react-dom: 18.2.0
@@ -15336,6 +15355,8 @@ __metadata:
     eslint: ^8.4.1
     eslint-config-prettier: ^8.5.0
     eslint-plugin-prettier: ^4.0.0
+    expo-location: ^16.3.0
+    expo-modules-core: 1.5.11
     jest: ^28.1.1
     pod-install: ^0.1.0
     prettier: ^2.0.5
