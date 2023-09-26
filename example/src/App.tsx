@@ -13,7 +13,7 @@ export default function App() {
       <What3Words
         apiKey={API_KEY}
         mapApiKey={MAP_API_KEY}
-        onSelect={console.log}
+        onEvent={console.log}
       />
     </View>
   );
