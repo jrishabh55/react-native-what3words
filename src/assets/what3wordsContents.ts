@@ -25,15 +25,39 @@ const what3wordsContents = `
     }
 
     #search-container {
-      margin: 10px 0 0 10px;
+      --padding: 20px;
+      position: relative;
+      z-index: 1;
+      width: 95%;
+      padding: var(--padding);
+      display: flex;
+      justify-content: center;
+      transform: translateX(-50%);
     }
 
     #search-input {
-      width: 300px;
+      flex-grow: 1;
+      font-size: 68px;
+      outline: none;
     }
 
-    #current-location-container {
-      margin: 0 10px 10px 0;
+    .what3words-autosuggest-address {
+      font-size: 40px !important;
+      line-height: 50px !important;
+    }
+
+    .what3words-autosuggest-nearest-place-text > div:first-child {
+      font-size: 36px !important;
+      line-height: 40px !important;
+    }
+    .what3words-autosuggest-nearest-place-distance {
+      font-size: 36px !important;
+      line-height: inherit !important;
+    }
+
+    .what3words-autosuggest-message {
+      font-size: 30px !important;
+      line-height: inherit !important;
     }
   </style>
 
@@ -43,17 +67,7 @@ const what3wordsContents = `
   id='w3w-map'
   api_key='{{WHAT_3_WORDS_API_KEY}}'
   map_api_key='{{MAP_API_KEY}}'
-  disable_default_ui
-  fullscreen_control
-  map_type_control
-  zoom_control
-  fullscreen_control
-  disable_default_ui
-  map_type_id="satellite"
-  current_location_control_position='9'
-  fullscreen_control_position='3'
-  search_control_position='2'
-  {{EXTRA_ATTRIBUTES}}
+  {{MAP_EXTRA_ATTRIBUTES}}
 >
   <div slot='map' id='map-container'></div>
   <div slot='search-control' id='search-container'>
@@ -61,13 +75,10 @@ const what3wordsContents = `
       <input
         id='search-input'
         type='text'
-        placeholder='Find your address'
+        placeholder="e.g. ///filled.count.soap"
         autocomplete='off'
       />
     </what3words-autosuggest>
-  </div>
-  <div slot='current-location-control' id='current-location-container'>
-    <button>Current Location</button>
   </div>
 </what3words-map>
 </body>
