@@ -11,11 +11,25 @@ npm install react-native-what3words
 ## Usage
 
 ```js
-import { multiply } from 'react-native-what3words';
+import What3Words from 'react-native-what3words';
 
 // ...
 
-const result = await multiply(3, 7);
+const API_KEY = '';
+const MAP_API_KEY = '';
+
+export default function MapComponent() {
+  return (
+    <View style={styles.container}>
+      <Text>What3Words</Text>
+      <What3Words
+        apiKey={API_KEY}
+        mapApiKey={MAP_API_KEY}
+        onEvent={console.log}
+      />
+    </View>
+  );
+}
 ```
 
 ## Contributing
