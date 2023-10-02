@@ -38,10 +38,6 @@ export const What3Words: VFC<What3WordsProps> = ({
     });
     return _htmlContent;
   }, [apiKey, mapApiKey, rest]);
-  console.log(
-    '🚀 ~ file: What3Words.tsx:41 ~ htmlContent ~ htmlContent:',
-    htmlContent
-  );
 
   return (
     <WebView
