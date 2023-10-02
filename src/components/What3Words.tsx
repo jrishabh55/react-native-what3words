@@ -1,6 +1,6 @@
 import type { VFC } from 'react';
 import React, { useMemo } from 'react';
-import WebView, { type WebViewMessageEvent } from 'react-native-webview';
+import WebView, { WebViewMessageEvent } from 'react-native-webview';
 import { getWhat3WordsAsset } from '../utils';
 
 export type What3WordsProps = {
