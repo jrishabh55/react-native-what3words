@@ -160,8 +160,6 @@
     ]
   },
   "dependencies": {
-    "expo-location": "^16.3.0",
-    "expo-modules-core": "1.5.11",
     "react-native-webview": "^13.6.0"
   }
 }
