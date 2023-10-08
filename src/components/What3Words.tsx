@@ -9,7 +9,8 @@ export type What3WordsProps = {
   mapApiKey: string;
   lat?: number;
   lng?: number;
-};
+  words?: string;
+} & Record<string, unknown>;
 
 export const What3Words: VFC<What3WordsProps> = ({
   apiKey,
