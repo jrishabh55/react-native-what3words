@@ -10,14 +10,16 @@ export const getWhat3WordsAsset = (
   } & Record<string, ValueType>
 ) => {
   const { apiKey, mapApiKey, ...rest } = arg;
-  return replaceAttrs(what3wordsContents, {
+  const args = {
     WHAT_3_WORDS_API_KEY: apiKey,
     MAP_API_KEY: mapApiKey,
+    SEARCH_CONTROL_TRANSFORM: !rest.words ? 'translateX(-50%)' : 'unset',
     MAP_EXTRA_ATTRIBUTES: parseExtraAttributes({
       ...mapComponentAttrs,
       ...rest,
     }),
-  });
+  };
+  return replaceAttrs(what3wordsContents, args);
 };
 
 export const replaceAttrs = (str: string, obj: Record<string, ValueType>) => {

@@ -32,7 +32,7 @@ const what3wordsContents = `
       padding: var(--padding);
       display: flex;
       justify-content: center;
-      transform: translateX(-50%);
+      transform: {{SEARCH_CONTROL_TRANSFORM}};
     }
 
     #search-input {
