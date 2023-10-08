@@ -1,6 +1,6 @@
 {
   "name": "react-native-what3words",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "a react native wrapper for what3words",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
